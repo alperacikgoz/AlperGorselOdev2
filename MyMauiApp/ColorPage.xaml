@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyMauiApp.ColorPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Renk Seçici">
+
+  <ScrollView>
+    <VerticalStackLayout
+        x:Name="rootLayout"
+        Padding="20"
+        Spacing="15">
+
+      <Label Text="Kırmızı (Red):" FontAttributes="Bold" />
+      <Slider x:Name="sliderRed" Minimum="0" Maximum="255" ValueChanged="OnSliderValueChanged" />
+      <Label x:Name="lblRed" Text="Red: 0" />
+
+      <Label Text="Yeşil (Green):" FontAttributes="Bold" />
+      <Slider x:Name="sliderGreen" Minimum="0" Maximum="255" ValueChanged="OnSliderValueChanged" />
+      <Label x:Name="lblGreen" Text="Green: 0" />
+
+      <Label Text="Mavi (Blue):" FontAttributes="Bold" />
+      <Slider x:Name="sliderBlue" Minimum="0" Maximum="255" ValueChanged="OnSliderValueChanged" />
+      <Label x:Name="lblBlue" Text="Blue: 0" />
+
+      <Label x:Name="lblHex" FontSize="20" FontAttributes="Bold" Text="#000000" />
+
+      <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+        <Button x:Name="btnCopy"   Text="Kopyala"  Clicked="OnCopyClicked" />
+        <Button x:Name="btnRandom" Text="Rastgele" Clicked="OnRandomClicked" />
+      </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+  </ScrollView>
+</ContentPage>

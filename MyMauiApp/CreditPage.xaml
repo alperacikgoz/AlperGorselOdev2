@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyMauiApp.CreditPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Kredi Hesaplama">
+
+  <ScrollView>
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="15">
+
+      <!-- Kredi Türü -->
+      <Label Text="Kredi Türü:" FontAttributes="Bold" />
+      <Picker
+          x:Name="pickerCreditType"
+          Title="Seçiniz">
+        <Picker.Items>
+          <x:String>İhtiyaç Kredisi</x:String>
+          <x:String>Taşıt Kredisi</x:String>
+          <x:String>Konut Kredisi</x:String>
+          <x:String>Ticari Kredisi</x:String>
+        </Picker.Items>
+      </Picker>
+
+      <!-- Kredi Tutarı -->
+      <Label Text="Kredi Tutarı (₺):" FontAttributes="Bold" />
+      <Entry
+          x:Name="entryAmount"
+          Keyboard="Numeric"
+          Placeholder="Tutar girin" />
+
+      <!-- Faiz Oranı -->
+      <Label Text="Yıllık Faiz Oranı (%):" FontAttributes="Bold" />
+      <Entry
+          x:Name="entryInterestRate"
+          Keyboard="Numeric"
+          Placeholder="Örn. 1.75" />
+
+      <!-- Vade -->
+      <Label Text="Vade (Ay):" FontAttributes="Bold" />
+      <Slider
+          x:Name="sliderTerm"
+          Minimum="1"
+          Maximum="120"
+          Value="12" />
+      <Label
+          x:Name="lblTermValue"
+          Text="Vade: 12 ay" />
+
+      <!-- Hesapla Butonu -->
+      <Button
+          x:Name="btnCalculate"
+          Text="Hesapla"
+          Clicked="OnCalculateClicked" />
+
+      <!-- Sonuç -->
+      <Label
+          x:Name="lblResult"
+          FontSize="18"
+          FontAttributes="Bold"
+          TextColor="Green" />
+
+    </VerticalStackLayout>
+  </ScrollView>
+</ContentPage>

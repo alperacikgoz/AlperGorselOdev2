@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyMauiApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Ana Sayfa">
+
+  <ScrollView>
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+      <!-- Profil Resmi -->
+      <Image
+          Source="profile.png"
+          Aspect="AspectFill"
+          HeightRequest="200"
+          WidthRequest="200"
+          HorizontalOptions="Center"
+          VerticalOptions="Center"
+          SemanticProperties.Description="Profil Resmi" />
+
+      <!-- Öğrenci Ad Soyad -->
+      <Label
+          x:Name="lblAdSoyad"
+          Text="Alper Açıkgöz"
+          FontSize="24"
+          HorizontalOptions="Center"
+          VerticalOptions="Center"
+          FontAttributes="Bold" />
+
+      <!-- (İleriki adımda Kredi Hesaplama sayfasına geçiş butonu ekleyeceğiz) -->
+
+    </VerticalStackLayout>
+  </ScrollView>
+
+</ContentPage>
